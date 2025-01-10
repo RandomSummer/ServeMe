@@ -27,7 +27,6 @@ def logout():
     st.session_state.role = None
     st.rerun()
 
-
 role = st.session_state.role
 
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")

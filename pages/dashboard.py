@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
 
 
 with st.sidebar:
@@ -23,11 +26,20 @@ if "visibility" not in st.session_state:
 uploaded_files = st.file_uploader(
     "Upload Your Dataset Here ...", accept_multiple_files=True
 )
-for uploaded_file in uploaded_files:
-    df = pd.read_csv(uploaded_file, index_col = None)
+# for uploaded_file in uploaded_files:
 
-    # bytes_data = uploaded_file.read()
-    st.write("filename:", uploaded_file.name)
-    st.dataframe(df.style.highlight_max(axis=0), width=None)
+#     st.write("filename:", uploaded_file.name)
+
+#     chart, data = st.tabs(["🗃 Data", "📈 Chart"])
+#     df = pd.read_csv(uploaded_file, index_col = None)
+
+#     data.subheader("Data Tab")
+#     st.dataframe(df.style.highlight_max(axis=0), width=None)
+
+#     # bytes_data = uploaded_file.read()
+#     chart.subheader("Chart Tab")
+#     df_chart = pd.DataFrame(df)
+#     chart.line_chart(df_chart)
+
 
 
