@@ -2,7 +2,6 @@ import streamlit as st
 
 
 # project title page 
-
 st.set_page_config(
     page_title="ServeMe"
 )
@@ -65,7 +64,7 @@ admin_pages = [admin_1, admin_2]
 menu_pages = [dashboard, account]
 
 
-# st.title("Request manager")
+st.title("Request manager")
 st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
 
 page_dict = {}
