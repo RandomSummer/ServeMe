@@ -66,8 +66,8 @@ admin_pages = [admin_1, admin_2]
 menu_pages = [dashboard, account]
 
 
-st.title("Request manager")
-# st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
+# st.title("Request manager")
+st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
 
 page_dict = {}
 if st.session_state.role in ["Admin", "Super Admin"]:
