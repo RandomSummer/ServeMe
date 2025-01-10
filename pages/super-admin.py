@@ -1,24 +1,27 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-import pages.dashboard as dashboard, pages.account as account
 
-st.set_page_config(
-    page_title="ServeMe"
-)
+st.title("This page is available to super-admins")
+st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
+
+
 # Using "with" notation
 
 class ServeMe:
+
     def __init__(self):
-        self.apps = []
+        self.apps = []    
+
     def add_app(self, title, func):
         self.apps.append({
             "title": title,
             "function": func 
         })
+
     def run():
 
-        with st.sidebar:
+    
             app = option_menu(
                 menu_title="ServeMe",
                 options=["Dashboard", "Account"],
@@ -33,8 +36,8 @@ class ServeMe:
             )
 
             if app == "Dashboard":
-                dashboard.app()
+                st.Page("dashboard.py")
             if app == "Account":
-                account.app()
+                st.Page("account.py")
             
     run()
