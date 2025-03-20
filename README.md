@@ -1,2 +1,2 @@
 # ServeMe
-this repo contain ml project
+this repo contains Automated WebApp for "Trash Detection"
